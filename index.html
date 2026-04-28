@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Analytics Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">PA</div>
+        <div>
+          <p>Product</p>
+          <span>Analytics</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a class="nav-item active" href="#">
+          <span class="nav-icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+
+        <button class="nav-item nav-button" id="productToggle">
+          <span class="nav-icon">📦</span>
+          <span>Product</span>
+          <span class="nav-right">
+            <span class="nav-badge">5</span>
+            <span class="nav-chevron">▾</span>
+          </span>
+        </button>
+        <div class="submenu" id="productMenu">
+          <a href="#">Overview</a>
+          <a href="#">Drafts</a>
+          <a href="#">Released</a>
+          <a href="#">Comments</a>
+          <a href="#">Scheduled</a>
+        </div>
+
+        <a class="nav-item" href="#">
+          <span class="nav-icon">👥</span>
+          <span>Customers</span>
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon">🛒</span>
+          <span>Shop</span>
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon">📈</span>
+          <span>Income</span>
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon">🚀</span>
+          <span>Promote</span>
+        </a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="search-box">
+            <span>🔍</span>
+            <input type="search" placeholder="Search anything..." />
+          </div>
+        </div>
+        <div class="topbar-right">
+          <button class="icon-btn">🔔</button>
+          <button class="icon-btn">💬</button>
+          <div class="avatar">JD</div>
+          <button class="create-btn">Create</button>
+        </div>
+      </header>
+
+      <section class="overview-grid">
+        <div class="card stat-card">
+          <div class="stat-header">
+            <span>Customers</span>
+            <span class="percentage negative">-36.8%</span>
+          </div>
+          <h2>1,293</h2>
+        </div>
+
+        <div class="card stat-card">
+          <div class="stat-header">
+            <span>Balance</span>
+            <span class="percentage positive">+36.8%</span>
+          </div>
+          <h2>256k</h2>
+        </div>
+
+        <div class="card new-customers-card">
+          <p class="eyebrow">857 new customers today</p>
+          <p class="subtext">Send a welcome message to all new customers.</p>
+          <div class="avatars-row">
+            <div class="avatar-sm" title="Gladyce">G</div>
+            <div class="avatar-sm" title="Elbert">E</div>
+            <div class="avatar-sm" title="Joyce">J</div>
+            <div class="avatar-sm" title="Joyce">J</div>
+            <div class="avatar-sm" title="Joyce">J</div>
+            <div class="avatar-more">+4</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-grid">
+        <div class="card product-view-card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow">Product view</p>
+              <h3>$10.2m</h3>
+            </div>
+            <span class="chip positive">+36.8%</span>
+          </div>
+          <div class="chart-bars">
+            <div class="chart-bar" style="height: 140px;"><span>14</span></div>
+            <div class="chart-bar" style="height: 180px;"><span>15</span></div>
+            <div class="chart-bar" style="height: 155px;"><span>16</span></div>
+            <div class="chart-bar active" style="height: 220px;"><span>17</span></div>
+            <div class="chart-bar" style="height: 170px;"><span>18</span></div>
+            <div class="chart-bar" style="height: 130px;"><span>19</span></div>
+            <div class="chart-bar" style="height: 155px;"><span>20</span></div>
+          </div>
+        </div>
+
+        <aside class="right-panel">
+          <div class="card analytics-card">
+            <div class="analytics-header">
+              <p>Devices</p>
+              <span>Last 7 days</span>
+            </div>
+            <div class="donut-chart">
+              <div class="donut-center">12.5%</div>
+            </div>
+            <div class="breakdown-list">
+              <div><span class="dot mobile"></span><span>Mobile</span><strong>15.20%</strong></div>
+              <div><span class="dot tablet"></span><span>Tablet</span><strong>17.1%</strong></div>
+              <div><span class="dot desktop"></span><span>Desktop</span><strong>66.62%</strong></div>
+            </div>
+          </div>
+
+          <div class="card popular-card">
+            <div class="card-header">
+              <p class="eyebrow">Popular products</p>
+            </div>
+            <div class="product-item">
+              <div>
+                <strong>Crypter - NFT UI Kit</strong>
+                <span>$3,250.00</span>
+              </div>
+              <span class="status-badge active">Active</span>
+            </div>
+            <div class="product-item">
+              <div>
+                <strong>Bento Pro 2.0 Illustrations</strong>
+                <span>$7,890.00</span>
+              </div>
+              <span class="status-badge active">Active</span>
+            </div>
+            <div class="product-item">
+              <div>
+                <strong>Fleet - travel shopping kit</strong>
+                <span>$1,500.00</span>
+              </div>
+              <span class="status-badge offline">Offline</span>
+            </div>
+            <div class="product-item">
+              <div>
+                <strong>SimpleSocial UI Design Kit</strong>
+                <span>$4,750.00</span>
+              </div>
+              <span class="status-badge active">Active</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
