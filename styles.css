@@ -101,7 +101,7 @@ button {
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.18s ease, background 0.18s ease;
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
 
 .nav-item:hover,
@@ -109,11 +109,13 @@ button {
 .nav-item.active {
   background: rgba(38, 208, 123, 0.14);
   transform: translateX(2px);
+  box-shadow: 0 4px 12px rgba(38, 208, 123, 0.2);
 }
 
 .nav-icon {
   width: 24px;
-  text-align: center;
+  height: 24px;
+  object-fit: contain;
 }
 
 .nav-chevron {
@@ -187,6 +189,13 @@ button {
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
   cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.icon-btn:hover,
+.create-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.05);
 }
 
 .create-btn {
@@ -196,14 +205,10 @@ button {
 }
 
 .avatar {
-  display: grid;
-  place-items: center;
   width: 44px;
   height: 44px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text);
-  font-weight: 700;
+  object-fit: cover;
 }
 
 .overview-grid {
@@ -219,6 +224,12 @@ button {
   background: var(--surface);
   box-shadow: var(--shadow);
   backdrop-filter: blur(24px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.32);
 }
 
 .stat-card h2 {
@@ -275,17 +286,16 @@ button {
   width: 42px;
   height: 42px;
   border-radius: 14px;
-  display: grid;
-  place-items: center;
-  background: rgba(255,255,255,0.08);
-  color: var(--text);
+  object-fit: cover;
   border: 1px solid rgba(255,255,255,0.08);
-  font-weight: 700;
 }
 
 .avatar-more {
   color: var(--muted);
   background: rgba(255, 255, 255, 0.03);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
 }
 
 .main-grid {
@@ -336,6 +346,12 @@ button {
   background: rgba(255,255,255,0.05);
   border-radius: 20px;
   min-height: 84px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.chart-bar:hover {
+  background: rgba(255,255,255,0.1);
+  transform: scaleY(1.05);
 }
 
 .chart-bar span {
@@ -385,6 +401,11 @@ button {
   );
   display: grid;
   place-items: center;
+  transition: transform 0.3s ease;
+}
+
+.donut-chart:hover {
+  transform: rotate(5deg);
 }
 
 .donut-chart::before {
@@ -436,6 +457,19 @@ button {
 
 .product-item:last-child {
   border-bottom: none;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .product-item strong {
